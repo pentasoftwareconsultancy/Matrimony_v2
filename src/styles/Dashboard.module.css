@@ -1,0 +1,310 @@
+.dashboard {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.cardsContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.earningsContainer {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.earningsChart {
+  flex: 2;
+  background: #f9f9f9;
+  padding: 20px;
+  margin-right: 20px; 
+  border-radius: 10px;
+}
+
+.chartPlaceholder {
+  height: 200px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+.earningsStats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.earningsCard {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+}
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Dashboard Container */
+.dashboard {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Cards Animation */
+.cardsContainer {
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.7s ease forwards;
+  animation-delay: 0.3s; /* Delay cards animation */
+}
+
+/* Animation for individual cards */
+.cardsContainer .card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.cardsContainer .card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.cardsContainer .card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.cardsContainer .card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.cardsContainer .card:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+/* Earnings Container Animation */
+.earningsContainer {
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.5s; /* Delay earnings container animation */
+}
+
+/* Earnings Cards Animation */
+.earningsStats .earningsCard {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.earningsStats .earningsCard:nth-child(1) {
+  animation-delay: 0.8s;
+}
+
+.earningsStats .earningsCard:nth-child(2) {
+  animation-delay: 0.9s;
+}
+
+.earningsStats .earningsCard:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.earningsStats .earningsCard:nth-child(4) {
+  animation-delay: 1.1s;
+}
+
+/* Earnings Chart Animation */
+.earningsChart {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 1s;
+}
+
+/* Keyframes for FadeIn and FadeInUp */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.reportButton {
+  margin-left: 80%;
+ margin-top: -5%;
+  /* padding: 10px 20px; */
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10%;
+  cursor: pointer;
+  font-size: 16px;
+  height: 20vh;
+}
+
+.reportButton:hover {
+  background-color: #45a049;
+}
+
+.reportModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.reportModal h3 {
+  margin-bottom: 20px;
+}
+
+.reportModal button {
+  margin-right: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reportModal button:hover {
+  background-color: #0056b3;
+}
+
+.reportModal button:last-child {
+  background-color: #dc3545;
+}
+
+.reportModal button:last-child:hover {
+  background-color: #c82333;
+}
+
+.activityTab {
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profileImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.profileName {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+.activeTab {
+  border-bottom: 2px solid #6200ee;
+  font-weight: bold;
+  color: #333;
+}
+
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.activityItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.gold {
+  background-color: #ffd700;
+}
+
+.silver {
+  background-color: #c0c0c0;
+}
+
+.bronze {
+  background-color: #cd7f32;
+}
+
+.defaultBadge {
+  background-color: #e0e0e0;
+}
+
+.activityContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.activityTitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.activityDetails {
+  font-size: 14px;
+  color: #777;
+}

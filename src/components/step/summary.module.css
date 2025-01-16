@@ -1,0 +1,49 @@
+.summaryContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h3 {
+    margin-top: 20px;
+    color: #007bff;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+  .summaryContainer {
+  padding: 20px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.summary {
+  margin-top: 20px;
+}
+.summaryContainer img{
+  width: 10%;
+}
+.summaryImage {
+  width: auto;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+.imageUploadSection {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.imagePreview {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.uploadedImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}

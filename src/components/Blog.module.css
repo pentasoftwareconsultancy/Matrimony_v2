@@ -1,0 +1,193 @@
+/* .searchInput {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.container{
+  width: 90%;
+  height: 80vh;
+  margin-left: 5%;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+
+
+.filterContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filterContainer div {
+  display: flex;
+  gap: 16px;
+  margin-left: 50%;
+  margin-top: -6%;
+  margin-bottom: 1%;
+}
+.filterContainer input {
+  display: flex;
+
+}
+.activeFilter {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.actionButton {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.actionButton:hover {
+  background-color: #218838;
+} */
+/* Blog Container */
+.container {
+  opacity: 0;  margin-left: 5%;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Title Animation */
+.title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.3s; /* Delay the title animation */
+}
+
+/* Filter Container (Search and Filter) */
+.filterContainer {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.5s; /* Delay the filter container animation */
+}
+.searchInput {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Search Input */
+.searchInput {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.tableImage {
+  max-width: 50px;
+  max-height: 50px;
+}
+.searchInput:focus {
+  border-color: #0056b3;
+}
+
+/* Filter Buttons */
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Active Filter Button */
+.activeFilter {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Table Section Animation */
+.tableSection {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.7s; /* Delay table section animation */
+}
+
+/* Table Animation */
+.table tr {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.table tr:nth-child(odd) {
+  animation-delay: 0.9s;
+}
+
+.table tr:nth-child(even) {
+  animation-delay: 1.1s;
+}
+
+/* Table Images */
+.tableImage {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Action Button Animation */
+.actionButton {
+  background-color: #0056b3;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.actionButton:hover {
+  transform: scale(1.1);
+}
+
+/* Keyframes for FadeInUp */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.table th, .table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
