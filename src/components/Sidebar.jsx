@@ -24,30 +24,29 @@ const Sidebar = () => {
         <h2 className={styles.logo}>Dashboard</h2>
         <a href="/dashboard" className={styles.button}>
          
-        <i className="fa-solid fa-gauge"></i>Wallet
+        <i className="fa-solid fa-gauge"></i>Dashboard
         </a>
 
-        <button
-          className={`${styles.button} ${styles.block} ${
-            isAccordionOpen ? styles.green : ""
-          }`}
-          onClick={toggleAccordion}
-        >  <i className="fa-solid fa-children"></i>
-        <a href="/membars"> Membars <i className="fa fa-caret-down"></i></a>
-        </button>
-        <div
-          className={`${styles.card} ${isAccordionOpen ? styles.show : styles.hide}`}
-        >
-          <a href="/upload" className={styles.button}>
-            Bulk Membars
-          </a>
-          <a href="#" className={styles.button}>
-            Deleted Membars
-          </a>
-          <a href="#" className={styles.button}>
-            Reported Membars
-          </a>
-        </div>
+        <button className={styles.button}>
+    <i className="fa-solid fa-gauge"></i> Dashboard
+  </button>
+  <button
+    className={`${styles.button} ${styles.block} ${
+      isAccordionOpen ? styles.green : ""
+    }`}
+    onClick={toggleAccordion}
+  > <a href="/membars"> 
+    <i className="fa-solid fa-children"></i> 
+   Membars <i className="fa fa-caret-down"></i></a>
+  </button>
+  <div className={`${styles.card} ${isAccordionOpen ? styles.show : styles.hide}`}>
+    <a href="/upload" className={styles.button}>
+      Bulk Membars
+    </a>
+    <a href="#" className={styles.button}>
+      Deleted Membars
+    </a>
+  </div>
 
         <button
           className={`${styles.button} ${styles.block} ${

@@ -63,7 +63,7 @@ const UploadMember = () => {
     </div>    
     </>
 
-  );
+  );                                                                                                                           
 };
 
 export default UploadMember;

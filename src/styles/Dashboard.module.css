@@ -1,29 +1,32 @@
 .dashboard {
-  padding: 20px;
+  padding: 2px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2px;
 
 }
 
 .cardsContainer {
   display: flex;
-  gap: 20px;
+  gap: 2px;
+  height: 20vh;
   justify-content: space-between;
 }
 
 .earningsContainer {
   display: flex;
-  gap: 20px;
+  gap: 2px;
   justify-content: space-between;
 }
 
 .earningsChart {
   flex: 2;
+  display: flex;
   background: #f9f9f9;
   padding: 20px;
-  margin-right: 20px; 
+  margin-right: 2px; 
   border-radius: 10px;
+  background-color: transparent;
 }
 
 .chartPlaceholder {
@@ -40,12 +43,12 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1px;
 }
 
 .earningsCard {
   background: #f9f9f9;
-  padding: 15px;
+  
   border-radius: 10px;
   text-align: center;
   color: black;
@@ -103,7 +106,7 @@ body {
 /* Earnings Container Animation */
 .earningsContainer {
   display: flex;
-  gap: 20px;
+  gap: 2px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 0.8s ease forwards;
@@ -135,7 +138,8 @@ body {
 
 /* Earnings Chart Animation */
 .earningsChart {
-  opacity: 0;
+  opacity: 2;
+  width: 100%;
   transform: translateY(20px);
   animation: fadeIn 0.8s ease forwards;
   animation-delay: 1s;
@@ -156,8 +160,8 @@ body {
   }
 }
 .reportButton {
-  margin-left: 80%;
- margin-top: -5%;
+  margin-left: 50%;
+ margin-top: 5%;
   /* padding: 10px 20px; */
   background-color: #4caf50;
   color: white;
@@ -175,10 +179,11 @@ body {
 
 .reportModal {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 80%;
+  right:  20%;
+  width: 100%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: rgb(245, 245, 245);
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -190,7 +195,7 @@ body {
 }
 
 .reportModal button {
-  margin-right: 10px;
+  /* margin-right: 10px; */
   padding: 10px 15px;
   background-color: #007bff;
   color: white;
@@ -212,8 +217,12 @@ body {
 }
 
 .activityTab {
-  padding: 20px;
-  background-color: #f9f9f9;
+background-color: #11213b;
+box-shadow: 10px 4px 15px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  color: #c0c0c0;
+  border-radius: 10%;
+  height: 65vh;
   font-family: Arial, sans-serif;
 }
 
@@ -232,8 +241,10 @@ body {
 
 .profileName {
   font-size: 18px;
+  margin-top: 5%;
   font-weight: bold;
-  color: #333;
+  margin-left: 25%;
+  color: #f4f2f2;
 }
 
 .tabs {
@@ -252,11 +263,14 @@ body {
 .activeTab {
   border-bottom: 2px solid #6200ee;
   font-weight: bold;
-  color: #333;
+  margin-top:-5% ;
+  color: #f1eaea;
 }
 
 .activityList {
   display: flex;
+  width: 90%;
+  margin-left: 5%;
   flex-direction: column;
   gap: 15px;
 }
@@ -265,7 +279,7 @@ body {
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: #ffffff;
+  background-color: #b5b3b3;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -307,4 +321,36 @@ body {
 .activityDetails {
   font-size: 14px;
   color: #777;
+}
+
+.activityList {
+  max-height: 300px; /* Adjust the height as needed */
+  overflow-y: auto;
+  padding-right: 10px; /* For better spacing with scrollbar */
+}
+
+/* Webkit Scrollbar Styling */
+.activityList::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.activityList::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+.activityList::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color on hover */
+}
+
+.activityList::-webkit-scrollbar-track {
+  background:none; /* Background of the scrollbar track */
+  border-radius: 10px; /* Match the thumb radius */
+  display: none;
+}
+
+/* For Firefox (Optional) */
+.activityList {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #888 #f1f1f1; /* Thumb color and track color */
 }

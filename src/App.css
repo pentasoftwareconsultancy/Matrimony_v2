@@ -1,6 +1,18 @@
 *{
   box-sizing: border-box;
+  margin:0 ;
+  padding: 0;
+
  }
+ .grid-container {
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main';
+  height: 100vh;
+}
 
 @keyframes logo-spin {
   from {
@@ -68,7 +80,12 @@ button:hover {
     background-color: #4682b4;
   }
 }
-
+body {
+ 
+  background-color: #1d2634;
+  color: #9e9ea4;
+  font-family: 'Montserrat', sans-serif;
+}
 
 .light-mode {
   --background-color: #ffffff;

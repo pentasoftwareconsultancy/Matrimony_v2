@@ -21,6 +21,7 @@ import AddNewblog from '../components/AddNewblog';
 import Brides from '../components/Brides';
 import Grooms from '../components/Grooms';
 import Notification from '../components/Notifications/Notifications'
+import Department from '../components/Department';
 
 
 
@@ -31,6 +32,7 @@ const DashboardRoutes = () => {
     <Routes>
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/membars" element={<Members />} />
+      <Route path="/department" element={<Department />} />
       <Route path="/upload" element={<UploadMember />} />
       <Route path="/county" element={<CountryList/>} />
       <Route path="/start" element={<StatesManagement/>} />
