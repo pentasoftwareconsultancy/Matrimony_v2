@@ -1,0 +1,356 @@
+.dashboard {
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+}
+
+.cardsContainer {
+  display: flex;
+  gap: 2px;
+  height: 20vh;
+  justify-content: space-between;
+}
+
+.earningsContainer {
+  display: flex;
+  gap: 2px;
+  justify-content: space-between;
+}
+
+.earningsChart {
+  flex: 2;
+  display: flex;
+  background: #f9f9f9;
+  padding: 20px;
+  margin-right: 2px; 
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.chartPlaceholder {
+  height: 200px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+.earningsStats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.earningsCard {
+  background: #f9f9f9;
+  
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+}
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Dashboard Container */
+.dashboard {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Cards Animation */
+.cardsContainer {
+  display: flex;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.7s ease forwards;
+  animation-delay: 0.3s; /* Delay cards animation */
+}
+
+/* Animation for individual cards */
+.cardsContainer .card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.cardsContainer .card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.cardsContainer .card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.cardsContainer .card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.cardsContainer .card:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+/* Earnings Container Animation */
+.earningsContainer {
+  display: flex;
+  gap: 2px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.5s; /* Delay earnings container animation */
+}
+
+/* Earnings Cards Animation */
+.earningsStats .earningsCard {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.earningsStats .earningsCard:nth-child(1) {
+  animation-delay: 0.8s;
+}
+
+.earningsStats .earningsCard:nth-child(2) {
+  animation-delay: 0.9s;
+}
+
+.earningsStats .earningsCard:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.earningsStats .earningsCard:nth-child(4) {
+  animation-delay: 1.1s;
+}
+
+/* Earnings Chart Animation */
+.earningsChart {
+  opacity: 2;
+  width: 100%;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 1s;
+}
+
+/* Keyframes for FadeIn and FadeInUp */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.reportButton {
+  margin-left: 50%;
+ margin-top: 5%;
+  /* padding: 10px 20px; */
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10%;
+  cursor: pointer;
+  font-size: 16px;
+  height: 20vh;
+}
+
+.reportButton:hover {
+  background-color: #45a049;
+}
+
+.reportModal {
+  position: fixed;
+  top: 80%;
+  right:  20%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(245, 245, 245);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.reportModal h3 {
+  margin-bottom: 20px;
+}
+
+.reportModal button {
+  /* margin-right: 10px; */
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reportModal button:hover {
+  background-color: #0056b3;
+}
+
+.reportModal button:last-child {
+  background-color: #dc3545;
+}
+
+.reportModal button:last-child:hover {
+  background-color: #c82333;
+}
+
+.activityTab {
+background-color: #11213b;
+box-shadow: 10px 4px 15px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  color: #c0c0c0;
+  border-radius: 10%;
+  height: 65vh;
+  font-family: Arial, sans-serif;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profileImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.profileName {
+  font-size: 18px;
+  margin-top: 5%;
+  font-weight: bold;
+  margin-left: 25%;
+  color: #f4f2f2;
+}
+
+.tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+.activeTab {
+  border-bottom: 2px solid #6200ee;
+  font-weight: bold;
+  margin-top:-5% ;
+  color: #f1eaea;
+}
+
+.activityList {
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.activityItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #b5b3b3;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.gold {
+  background-color: #ffd700;
+}
+
+.silver {
+  background-color: #c0c0c0;
+}
+
+.bronze {
+  background-color: #cd7f32;
+}
+
+.defaultBadge {
+  background-color: #e0e0e0;
+}
+
+.activityContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.activityTitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.activityDetails {
+  font-size: 14px;
+  color: #777;
+}
+
+.activityList {
+  max-height: 300px; /* Adjust the height as needed */
+  overflow-y: auto;
+  padding-right: 10px; /* For better spacing with scrollbar */
+}
+
+/* Webkit Scrollbar Styling */
+.activityList::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.activityList::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+.activityList::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color on hover */
+}
+
+.activityList::-webkit-scrollbar-track {
+  background:none; /* Background of the scrollbar track */
+  border-radius: 10px; /* Match the thumb radius */
+  display: none;
+}
+
+/* For Firefox (Optional) */
+.activityList {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #888 #f1f1f1; /* Thumb color and track color */
+}

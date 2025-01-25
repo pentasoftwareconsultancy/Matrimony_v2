@@ -1,0 +1,151 @@
+.topbarContainer {
+  height: 50px;
+  width: 70%;
+  /* background-color: #051a35; */
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 5px;
+  background-color: #1d2634;
+  color: #9e9ea4;
+  margin-left: 25%;
+  z-index: 999;
+  margin-bottom: 15px;
+}
+
+.topbarLeft {
+  flex: 3;
+}
+
+.logo {
+  font-size: 24px;
+  margin-left: 2px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.topbarCenter {
+  flex: 5;
+}
+
+.searchbar {
+  width: 100%;
+  height: 43px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  margin-right: 5%;
+  align-items: center;
+}
+
+.searchIcon {
+  font-size: 20px !important;
+  margin-left: 10px;
+}
+
+.searchInput {
+  border: none;
+  width: 70%;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.topbarRight {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
+.topbarLink {
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.topbarIcons {
+  display: flex;
+}
+
+.topbarIconItem {
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.topbarIconBadge {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.topbarImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.notificationsPopover {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 300px;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+  z-index: 1000;
+  color: black;
+}
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --input-bg: #f0f0f0;
+  --popover-bg: #ffffff;
+  --divider-color: #e0e0e0;
+  --text-muted: #757575;
+}
+
+.notificationsTitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.notificationsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notificationItem {
+  padding: 10px;
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.notificationItem:last-child {
+  border-bottom: none;
+}
+
+.notificationItem p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.notificationItem span {
+  font-size: 12px;
+  color: var(--text-muted);
+}

@@ -1,0 +1,35 @@
+.uploadContainer {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    width: 50%;
+  }
+  
+  .instructions {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .uploadGroup {
+    margin-top: 10px;
+  }
+  
+  .fileInput {
+    margin-top: 10px;
+  }
+  
+  .preview {
+    margin-top: 15px;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .profilePictureContainer img{
+    width: 50%;
+  }
